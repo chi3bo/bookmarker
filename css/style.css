@@ -1,7 +1,7 @@
 body{
     background-image: linear-gradient(rgba(0, 0, 0, 0.404) 0% 100%) , url(../pexels2.jpg);
-    background-size: cover;
-    background-position: center;
+    background-size:cover;
+    background-position:center center;
     color: #fff;
     font-family: 'Ubuntu', sans-serif;
     text-shadow: 1px 1px 5px black;
