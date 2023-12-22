@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Ubuntu&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+
+<body >
+
+    <div class=" up container text-center ">
+
+
+        <div class="title text-center p-5 ">
+            <h1> Bookmarker </h1>
+        </div>
+        <p> bookmark your favorite sites </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div class="mid container text-center">
+
+        <div class="item py-3 text-start">
+            <label for="url"> Site Name </label>
+            <input type="text" id="siteName" onchange="makeSureName()" name="userName" class="form-control"
+                placeholder="bookmark name">
+            <div id="nameAlert" class="alert alert-danger py-2 px-3 d-none">website name must be 2 character or more
+            </div>
+        </div>
+
+        <div class="item py-3 text-start">
+            <label for="url"> Site URL </label>
+            <input type="text" id="siteUrl" onchange="makeSureUrel()" name="userLink" class="form-control "
+                placeholder="website URL">
+            <div id="urlAlert" class="alert alert-danger py-2 px-3 d-none">*URL must be more than 2character <br> *end
+                with .com .net .io . . . </div>
+
+        </div>
+
+        <BUtton onclick="addItems()" id="buttonId" class="btn btn-primary px-md-5 ">SUBMIT</BUtton>
+    </div>
+
+
+    <div class="data container py-4 text-center">
+
+
+        <table class="table table-hover text-white bg-gradient shadow table-responsive">
+
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="tableBody">
+                <tr>
+                    <td>1</td>
+                    <td>google</td>
+                    <td> <button class="btn btn-success"> <a href="+++butlinkhere+++" target="_blank"> Visit </a>
+                        </button> </td>
+                    <td> <button class="btn btn-danger"> Delete </button> </td>
+                </tr>
+            </tbody>
+
+
+        </table>
+    </div>
+
+
+
+
+    <div id="myModal" class=" d-flex justify-content-center align-items-center d-none p-2">
+        <div class="innerModal rounded p-3 col-sm-4 d-flex justify-content-center  flex-column">
+            <div class="up d-flex justify-content-between pb-3">
+                <div class="left">
+                    <i class="fa-solid fa-circle fa-2xl" style="color: #fdff74;"></i>
+                    <i class="fa-solid fa-circle fa-2xl" style="color: #7fff9f;"></i>
+                    <i class="fa-solid fa-circle fa-2xl" style="color: #ff7e7e;"></i>
+                </div>
+                <div class="right">
+                    <i id="xMark" class=" btn-close rounded "></i>
+                </div>
+            </div>
+            <div class="midd py-3">
+                <p>Please follow the rules below :</p>
+            </div>
+            <div class="bott py-3">
+                <p>
+                    <i class="fa-solid fa-circle-exclamation fa-lg"></i> Site URL must be a valid one (end with .com or .net ...)
+                </p>
+                <p>
+                    <i class="fa-solid fa-circle-exclamation fa-lg"></i> Site name must contain at least 3 characters.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+
+</html>
